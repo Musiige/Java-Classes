@@ -1,0 +1,18 @@
+public class CourseUnit {
+    public int noOfTopics;
+    public String lecturer;
+
+    /**
+     * @arguments courseUnitDuration in days
+    */
+    public Float calcEachTopicAverageLearningTime(int courseUnitDuration, char durationType){
+        Float avgLectureTime = null;
+        if(durationType == 'D' && courseUnitDuration > noOfTopics) {
+            avgLectureTime = (float) courseUnitDuration / (float) noOfTopics;
+        } else {
+            avgLectureTime = (float)(courseUnitDuration * 30) / (float) noOfTopics;
+        }
+
+        return avgLectureTime;
+    }
+}
